@@ -1,7 +1,27 @@
-
+import { Fragment } from "react";
+import Home from "./pages/Home";
+import { BrowserRouter as Router ,Routes, Route } from "react-router-dom";
+import Profile from "./pages/Profile";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+import ForgotPassword from "./pages/ForgotPassword";
+import Offers from "./pages/Offers";
 
 function App() {
-  return <h2 className="text-2xl bg-red-300"> Hello World!</h2>;
+  return (
+    <Fragment>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/offers" element={<Offers />} />
+        </Routes>
+        </Router>
+    </Fragment>
+  );
 }
 
 export default App;
