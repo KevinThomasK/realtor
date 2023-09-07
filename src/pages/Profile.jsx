@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { toast } from "react-toastify";
 import { db } from "../firebase";
+import { FcHome } from "react-icons/fc";
+import { Link } from "react-router-dom";
 
 export default function Profile() {
   const auth = getAuth();
@@ -61,8 +63,9 @@ export default function Profile() {
               value={name}
               disabled={!changeDetail}
               onChange={onChange}
-              className={`mb-6 w-full  px-4 py-2 text-xl text-gray-700 bg-white border border-gray-300 rounded transition ease-in-out ${changeDetail && "bg-red-200 focus:bg-red-200"}`}
-              
+              className={`mb-6 w-full  px-4 py-2 text-xl text-gray-700 bg-white border border-gray-300 rounded transition ease-in-out ${
+                changeDetail && "bg-red-200 focus:bg-red-200"
+              }`}
             ></input>
 
             <input
@@ -94,6 +97,12 @@ export default function Profile() {
               </p>
             </div>
           </form>
+          <button type="submit" className="w-full bg-blue-600 text-white uppercase px-7 py-2 text-sm font-medium rounded shadow-md hover:bg-blue-800 transition duration-200 ease-in-out hover:shadow-lg active:bg-blue-900">
+            <Link to="/create-listing" className="flex justify-center items-center">
+              <FcHome className="mr-2 text-3xl bg-red-200 rounded-full p-1 border-2"/>
+              Sell or Rent your Home
+            </Link>
+          </button>
         </div>
       </section>
     </>
