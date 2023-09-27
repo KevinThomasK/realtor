@@ -74,7 +74,7 @@ export default function CreateListing() {
       }));
     }
   }
-
+ 
   async function onSubmit(e) {
     e.preventDefault();
     setLoading(true);
