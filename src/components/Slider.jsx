@@ -52,7 +52,7 @@ export default function Slider() {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -72,7 +72,7 @@ export default function Slider() {
                   background: `url(${data.imgUrls[0]}) center, no-repeat`,
                   backgroundSize: "cover",
                 }}
-                className="relative w-full h-[350px]  object-fill"
+                className="relative w-full h-[350px] cursor-pointer object-fill"
               ></div>
               <p className="text-[#f1faee] absolute left-1 top-3 font-medium max-w-[90%] bg-[#457b9d] shadow-lg opacity-90 p-2 rounded-br-3xl">
                 {data.name}
